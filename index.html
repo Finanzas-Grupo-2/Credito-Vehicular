@@ -8,27 +8,29 @@
   </title>
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="/js/validation.js" defer></script>
 </head>
 <body>
   <div class="container" id="container">
 
     <div class="form-container register-container">
-      <form action="#">
+      <form action="process-signup.php" method="post" id="signup" novalidate>
         <h1>Register</h1>
         <img src="image/logo.png" class="logo">  
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Register</button>
+        <input type="text" placeholder="name" id="name" name="name">
+        <input type="email" placeholder="email" id="email" name="email">
+        <input type="password" placeholder="password" id="password" name="password">
+        <button type="submit">Register</button>
       </form>
     </div>
 
     <div class="form-container login-container">
-      <form action="#">
+      <form action="login.php" method= "post">
         <h1>Login</h1>
         <img src="image/logo.png" class="logo">  
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="email" placeholder="email" id="email" name="email">
+        <input type="password" placeholder="password" id="password" name="password">
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -63,7 +65,7 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
 </body>
 </html>
